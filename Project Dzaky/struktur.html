@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struktur Organisasi - OSIS 21</title>
+  <link rel="icon" type="image/png" href="image/OSIS_21-removebg-preview.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+   <style>
+    mark {
+      background: yellow;
+      padding: 2px;
+    }
+     html {
+        scroll-behavior: smooth;
+    }
+        body {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.org-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #b30000;
+  display: block;
+  margin: 0 auto 10px; /* tengah horizontal + jarak bawah 10px */
+}
+
+  </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg" style="background-color:rgb(141, 0, 0)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="image/OSIS_21-removebg-preview.png" alt="Logo OSIS" width="80" height="80">
+      </a>
+      <a class="navbar-brand" href="index.html" style="color:white">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="About Us.html" style="color:white">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="visi misi.html" style="color:white">Visi & Misi</a></li>
+          <li class="nav-item"><a class="nav-link" href="struktur.html" style="color:white">Struktur</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="dropdown-menu" role="button" data-bs-toggle="dropdown" style="color:white">
+              Program Kerja
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="podcast.html">Podcast Radio OSIS</a></li>
+              <li><a class="dropdown-item" href="kibas.html">KIBAS Award</a></li>
+              <li><a class="dropdown-item" href="classmeet.html">Classmeet</a></li>
+               <li><a class="dropdown-item" href="magali.html">Update MaGaLi</a></li>
+              <li><a class="dropdown-item" href="event.html">Event Hari Istimewa</a></li>
+              <li><a class="dropdown-item" href="lefosis.html">Lefosis</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return searchPage(event)">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Cari sesuatu...">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+   <script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("fade-in");
+  });
+</script>
+
+  <div class="container py-5">
+    <h2 class="text-center">Struktur Organisasi</h2>
+    <br><br>
+    <div class="row justify-content-center mt-2">
+      <div class="col-md-3"><div class="card p-3 text-center"><img src="foto/dzaky nia.jpg" alt="Ketua & Wakil" class="org-img">Ketua & Wakil<br><br><a href="biodata/dzaky.html"><b>Muhammad Dzaky Alfaruq</b></a><a href="biodata/nia.html"><b>Tanzania Syafana</b></a></div></div>
+  </div>
+      
+     <div class="container py-5">
+    <div class="row justify-content-center mt-4">
+   <div class="col-md-3"><div class="card p-3 text-center">
+    <img src="foto/sekretaris.jpg" alt="Sekretaris" class="org-img">Sekretaris<br><br><a href="biodata/fatima.html"><b>Fatima Raihanah Irawan</b></a><a href="biodata/aini.html"><b>Aini Rahadatul Aisy</b></a></div></div>
+      <div class="col-md-3"><div class="card p-3 text-center">
+        <img src="foto/bendahara.jpg" alt="Bendahara" class="org-img">Bendahara<br><br><a href="biodata/syakiilah.html"><b>Syakiilah Fropa</b></a><a href="biodata/ratu.html"><b>Ratu Varhatunnajiah</b></a></div></div>
+    </div>
+    <br>
+
+         <div class="container py-5">
+    <div class="row justify-content-center mt-3">
+   <div class="col-md-3"><div class="card p-3 text-center">
+    <img src="foto/kerohanian.jpg" alt="Kerohanian" class="org-img">
+    Sekbid Kerohanian dan Sosial<br><br><a href="biodata/azka.html"><b>Azka Ludira Seta Pramono</b></a><a href="biodata/rifah.html"><b>Ayuni Rifah</b></a><a href="biodata/chyril.html"><b>Chyril Aisyah Aqilah</b></a></div></div>
+      <div class="col-md-3"><div class="card p-3 text-center">
+        <img src="foto/kedisiplinan.jpg" alt="Kedisiplinan" class="org-img">
+        Sekbid Kedisiplinan dan Bela Negara<br><br><a href="biodata/fadhil.html"><b>Fadhil Wira Hadiwijoyo</b></a><a href="biodata/fikri.html"><b>Fikri Ghaisan Zakri</b></a><a href="biodata/khansa.html"><b>Khansa Alya Ayuningtiyas</b></a><a href="biodata/humayra.html"><b>Humayra Dzikra Scientya</b></a></div></div>
+      <div class="col-md-3"><div class="card p-3 text-center">
+        <img src="foto/akademik.jpg" alt="Akademik" class="org-img">
+        Sekbid Akademik dan Literasi<br><br><a href="biodata/aira.html"><b>Dzakira Esta Fahima</b></a><a href="biodata/nadiaa.html"><b>Nadia Amanda Sari</b></a><a href="biodata/nayla.html"><b>Nayla Faiha Setyani</b></a></div></div>
+    </div>
+
+        <div class="container py-5">
+    <div class="row justify-content-center mt-3">
+   <div class="col-md-3"><div class="card p-3 text-center">
+    <img src="foto/kesehatan.jpg" alt="Kesehatan" class="org-img">
+    Sekbid Kesehatan dan Lingkungan<br><br><a href="biodata/saskia.html"><b>Saskia Nur Azizah</b></a><a href="biodata/nafeeza.html"><b>Nafeeza Azkayra Zain</b></a><a href="biodata/aqil.html"><b>Aqil Digdaya Ahza</b></a></div></div>
+      <div class="col-md-3"><div class="card p-3 text-center">
+        <img src="foto/humas.jpg" alt="Humas" class="org-img">
+        Sekbid Humas dan Publikasi<br><br><a href="biodata/zira.html"><b>Zira Alnaya Ruhendy</b></a><a href="biodata/freya.html"><b>Freya Nahiza Qahiraz</b></a><a href="biodata/reza.html"><b>Muhammad Reza F.</b></a><a href="biodata/merlyn.html"><b>Merlyn Zuniar Panchisin</b></a></div></div>
+         <div class="col-md-3"><div class="card p-3 text-center">
+          <img src="foto/sekbid kesenian.jpg" alt="Kesenian" class="org-img">
+          Sekbid Kesenian dan Olahraga<br><br><a href="biodata/rafa.html"><b>Rafa Abdillah</b></a><a href="biodata/fariz.html"><b>Fariz Ramadhan</b></a><a href="biodata/nadias.html"><b>Nadia Shaki</b></a><a href="biodata/syalika.html"><b>Aisyalika Navalya Ibrahim</b></a></div></div>
+    </div>
+
+      <script>
+  // Fungsi Search langsung pindah halaman
+  function searchPage(event) {
+    event.preventDefault();
+    let keyword = document.getElementById("searchInput").value.toLowerCase();
+
+    // Daftar keyword & link tujuan
+    const pages = {
+      "home": "index.html",
+      "about us": "About Us.html",
+      "visi misi": "visi misi.html",
+      "struktur": "struktur.html",
+      "program": "program.html",
+      "podcast": "podcast.html",
+      "kibas": "kibas.html",
+      "classmeet": "classmeet.html",
+      "lefosis": "lefosis.html",
+      "magali": "magali.html",
+      "event hari istimewa": "event.html"
+    };
+
+    if (pages[keyword]) {
+      window.location.href = pages[keyword]; // langsung pindah ke halaman
+    } else {
+      alert("Halaman untuk '" + keyword + "' tidak ditemukan!");
+    }
+    return false;
+  }
+</script>
+
+<br><br><br><br>
+
+   <footer style="background-color: black; color: white; padding: 20px 0;">
+  <div class="container text-center">
+    <p>© 2025 OSIS 21 - ERAVOLVIA</p>
+    <p>Contact Us:</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://instagram.com/osisrj.21" target="_blank" style="color:white; text-decoration:none;">
+        <i class="bi bi-instagram"></i> Instagram
+        </a>
+    </div>
+  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

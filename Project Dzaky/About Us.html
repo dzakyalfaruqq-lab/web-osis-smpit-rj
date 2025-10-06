@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - OSIS 21</title>
+  <link rel="icon" type="image/png" href="image/OSIS_21-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    mark {
+      background: yellow;
+      padding: 2px;
+    }
+     html {
+        scroll-behavior: smooth;
+    }
+        body {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+   background: url('foto/fotstud.jpg') no-repeat center center/cover;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      position: relative;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+.about-box {
+  background: rgba(0, 0, 0, 0.5); /* warna hitam transparan */
+  display:contents, inline-block;
+  border-radius: 15px;
+  padding: 20px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  backdrop-filter: blur(1px); /* efek kaca buram */
+  justify-content: center;
+  align-items: center;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg" style="background-color:rgb(141, 0, 0)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="image/OSIS_21-removebg-preview.png" alt="Logo OSIS" width="80" height="80">
+      </a>
+      <a class="navbar-brand" href="index.html" style="color:white">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="About Us.html" style="color:white">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="visi misi.html" style="color:white">Visi & Misi</a></li>
+          <li class="nav-item"><a class="nav-link" href="struktur.html" style="color:white">Struktur</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="dropdown-menu" role="button" data-bs-toggle="dropdown" style="color:white">
+              Program Kerja
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="podcast.html">Podcast Radio OSIS</a></li>
+              <li><a class="dropdown-item" href="kibas.html">KIBAS Award</a></li>
+              <li><a class="dropdown-item" href="program kerja.html">Classmeet</a></li>
+               <li><a class="dropdown-item" href="magali.html">Update MaGaLi</a></li>
+              <li><a class="dropdown-item" href="event.html">Event Hari Istimewa</a></li>
+              <li><a class="dropdown-item" href="lefosis.html">Lefosis</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" onsubmit="return searchPage(event)">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Cari sesuatu...">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+     <br><br><br><br><br><br><br><br><br><br><br><br>
+
+   <script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("fade-in");
+  });
+</script>
+
+  <div class="about-box text-center text-white p-4">
+    <background src="foto/fotstud formal.jpg"></background>
+    <h2 class="text-center">About Us</h2>
+    <p class="text-center">OSIS 21 - ERAVOLVIA adalah organisasi siswa yang menjadi wadah aspirasi, kreativitas, dan kepemimpinan di sekolah.</p>
+  </div>
+
+       <script>
+  // Fungsi Search langsung pindah halaman
+  function searchPage(event) {
+    event.preventDefault();
+    let keyword = document.getElementById("searchInput").value.toLowerCase();
+
+    // Daftar keyword & link tujuan
+    const pages = {
+      "home": "index.html",
+      "about us": "About Us.html",
+      "visi misi": "visi misi.html",
+      "struktur": "struktur.html",
+      "program": "program.html",
+      "podcast": "podcast.html",
+      "kibas": "kibas.html",
+      "classmeet": "classmeet.html",
+      "lefosis": "lefosis.html",
+      "magali": "magali.html",
+      "event hari istimewa": "event.html"
+    };
+
+    if (pages[keyword]) {
+      window.location.href = pages[keyword]; // langsung pindah ke halaman
+    } else {
+      alert("Halaman untuk '" + keyword + "' tidak ditemukan!");
+    }
+    return false;
+  }
+</script>
+
+<br><br><br><br><br><br><br><br><br>
+  <!-- Footer -->
+ <footer style="background-color: black; color: white; padding: 20px 0;">
+  <div class="container text-center">
+    <p>© 2025 OSIS 21 - ERAVOLVIA</p>
+    <p>Contact Us:</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://instagram.com/osisrj.21" target="_blank" style="color:white; text-decoration:none;">
+        <i class="bi bi-instagram"></i> instagram
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
