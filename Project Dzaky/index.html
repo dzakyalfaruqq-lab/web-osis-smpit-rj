@@ -81,6 +81,87 @@ body.fade-in .fade-text {
     <p class="fade-text">Good Innovation for a Great Generation</p>
   </div>
 
+<!-- HOT NEWS SECTION -->
+<section id="hot-news" style="background-color:#f8f9fa; padding:50px 0;">
+  <div class="container text-center">
+    <h2 style="color:rgb(141,0,0); font-weight:bold;">🗞️ HOT NEWS</h2>
+    <div class="news-box mx-auto mt-4">
+      <div id="news-container">
+        <div class="news-item">
+          <h4>Pemilihan Ketua & Wakil OSIS 22 Dibuka!</h4>
+          <p>Ayo dukung calon terbaikmu! Pemilihan akan berlangsung pada <b>10-13 November 2025</b>.</p>
+        </div>
+        <div class="news-item">
+          <h4>Classmeet Semester Ganjil Akan Dimulai!</h4>
+          <p>Persiapkan tim terbaikmu dan tunjukkan semangat kompetitifmu dalam ajang tahunan paling seru ini!</p>
+        </div>
+        <div class="news-item">
+          <h4>Podcast OSIS Rilis Edisi Baru 🎙️</h4>
+          <p>Dengerin obrolan seru seputar dunia pelajar bareng host kece dari OSIS kita di <b>Suara Sekolah</b>.</p>
+        </div>
+        <div class="news-item">
+          <h4>OSIS 21 Berhasil Selenggarakan KIBAS Award 2025 🏆</h4>
+          <p>Terima kasih atas partisipasi seluruh siswa yang telah berkontribusi dalam ajang penghargaan tahunan ini!</p>
+        </div>
+        <div class="news-item">
+          <h4>🧾 PPDB 2026 Segera Dibuka!</h4>
+          <p>Pendaftaran Penerimaan Peserta Didik Baru tahun ajaran <b>2026/2027</b> akan dibuka mulai 
+          <b>5 Desember 2025</b>. info lebih lanjut klik link dibawah ini!</p>
+          <button class="btn btn-danger mt-2" link="smpit.raudhatuljannah.or.id">klik disini!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STYLE -->
+<style>
+#hot-news {
+  overflow: hidden;
+}
+.news-box {
+  width: 80%;
+  max-width: 700px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+#news-container {
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+}
+.news-item {
+  padding: 10px 20px;
+}
+.news-item h4 {
+  color: rgb(141,0,0);
+  font-weight: 700;
+}
+.news-item p {
+  color: #333;
+  margin-bottom: 0;
+}
+</style>
+
+<!-- SCRIPT -->
+<script>
+let currentNews = 0;
+const newsContainer = document.getElementById('news-container');
+const news = document.querySelectorAll('.news-item');
+const totalNews = newsItems.length;
+
+function showNextNews() {
+  currentNews = (currentNews + 1) % totalNews;
+  newsContainer.style.transform = `translateY(-${currentNews * 200}px)`;
+}
+
+setInterval(showNextNews, 5000); // ganti berita tiap 5 detik
+</script>
+  
   <br>
 
   <!--Time-->
@@ -246,6 +327,7 @@ Dalam wawancara pastikan menjawab secara yakin, dan sungguh-sungguh dengan keper
   </script>
 </body>
 </html>
+
 
 
 
