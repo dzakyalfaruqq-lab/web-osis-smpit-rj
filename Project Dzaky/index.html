@@ -114,34 +114,49 @@ body.fade-in .fade-text {
 <section id="hot-news" style="background-color:#f8f9fa; padding:50px 0;">
   <div class="container text-center">
     <h2 style="color:rgb(141,0,0); font-weight:bold;">NEWS</h2>
-    <div class="news-box mx-auto mt-4">
-      <div id="news-container">
-        <div class="news-item">
+    <div class="news-box mx-auto mt-4" style="overflow:hidden; width:80%; position:relative;">
+      <div id="news-container" style="display:flex; transition:transform 0.6s ease;">
+        <div class="news-item" style="min-width:100%; padding:20px;">
           <h4>Sumatif Akhir Semester akan Dimulai!</h4>
           <p>Persiapkan dirimu untuk mengikuti Sumatif Akhir Semester ini untuk mendapatkan nilai yang memuaskan!</p>
         </div>
-        <div class="news-item">
+        <div class="news-item" style="min-width:100%; padding:20px;">
           <h4>Classmeet Semester Ganjil Akan Dimulai!</h4>
           <p>Persiapkan tim terbaikmu dan tunjukkan semangat kompetitifmu dalam ajang tahunan paling seru ini!</p>
         </div>
-        <div class="news-item">
+        <div class="news-item" style="min-width:100%; padding:20px;">
           <h4>Podcast OSIS Rilis Edisi Baru 🎙️</h4>
           <p>Dengerin obrolan seru seputar dunia pelajar bareng host kece dari OSIS kita di <b>Suara Sekolah</b>.</p>
         </div>
-        <div class="news-item">
+        <div class="news-item" style="min-width:100%; padding:20px;">
           <h4>OSIS 21 Berhasil Selenggarakan KIBAS Award 2025 🏆</h4>
           <p>Terima kasih atas partisipasi seluruh siswa yang telah berkontribusi dalam ajang penghargaan tahunan ini!</p>
         </div>
-        <div class="news-item">
+        <div class="news-item" style="min-width:100%; padding:20px;">
           <h4>🧾 PPDB 2026 Segera Dibuka!</h4>
           <p>Pendaftaran Penerimaan Peserta Didik Baru tahun ajaran <b>2026/2027</b> akan dibuka mulai 
           <b>5 Desember 2025</b>. info lebih lanjut klik link dibawah ini!</p>
-          <button class="btn btn-danger mt-2" link href="smpit.raudhatuljannah.or.id">klik disini!</button>
+          <a href="https://smpit.raudhatuljannah.or.id" target="_blank" class="btn btn-danger mt-2">Klik di sini!</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+let currentNews = 0;
+const newsContainer = document.getElementById('news-container');
+const newsItems = document.querySelectorAll('.news-item');
+const totalNews = newsItems.length;
+
+function showNextNews() {
+  currentNews = (currentNews + 1) % totalNews;
+  newsContainer.style.transform = `translateX(-${currentNews * 100}%)`;
+}
+
+setInterval(showNextNews, 5000); // Ganti berita tiap 5 detik
+</script>
+
   
   <br>
 
@@ -254,20 +269,6 @@ Dalam wawancara pastikan menjawab secara yakin, dan sungguh-sungguh dengan keper
       </div>
     </div>
   </div>
-
-<script>
-let currentNews = 0;
-const newsContainer = document.getElementById('news-container');
-const news = document.querySelectorAll('.news-item');
-const totalNews = newsItems.length;
-
-function showNextNews() {
-  currentNews = (currentNews + 1) % totalNews;
-  newsContainer.style.transform = `translateY(-${currentNews * 200}px)`;
-}
-
-setInterval(showNextNews, 5000); // ganti berita tiap 5 detik
-</script>
   
     <script>
   // Fungsi Search langsung pindah halaman
@@ -322,6 +323,7 @@ setInterval(showNextNews, 5000); // ganti berita tiap 5 detik
   </script>
 </body>
 </html>
+
 
 
 
