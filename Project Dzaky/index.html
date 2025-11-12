@@ -24,6 +24,35 @@ body.fade-in .fade-text {
   opacity: 1;
   transform: translateY(0);
 }
+#hot-news {
+  overflow: hidden;
+}
+.news-box {
+  width: 80%;
+  max-width: 700px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+#news-container {
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+}
+.news-item {
+  padding: 10px 20px;
+}
+.news-item h4 {
+  color: rgb(141,0,0);
+  font-weight: 700;
+}
+.news-item p {
+  color: #333;
+  margin-bottom: 0;
+}
 
 
   </style>
@@ -88,8 +117,9 @@ body.fade-in .fade-text {
     <div class="news-box mx-auto mt-4">
       <div id="news-container">
         <div class="news-item">
-          <h4>Pemilihan Ketua & Wakil OSIS 22 Dibuka!</h4>
-          <p>Ayo dukung calon terbaikmu! Pemilihan akan berlangsung pada <b>10-13 November 2025</b>.</p>
+           <div class="news-item">
+          <h4>Sumatif Akhir Semester akan Dimulai!</h4>
+          <p>Persiapkan dirimu untuk mengikuti Sumatif Akhir Semester ini untuk mendapatkan nilai yang memuaskan!</p>
         </div>
         <div class="news-item">
           <h4>Classmeet Semester Ganjil Akan Dimulai!</h4>
@@ -113,39 +143,6 @@ body.fade-in .fade-text {
     </div>
   </div>
 </section>
-
-<!-- STYLE -->
-<style>
-#hot-news {
-  overflow: hidden;
-}
-.news-box {
-  width: 80%;
-  max-width: 700px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  padding: 20px;
-}
-#news-container {
-  position: relative;
-  transition: transform 0.8s ease-in-out;
-}
-.news-item {
-  padding: 10px 20px;
-}
-.news-item h4 {
-  color: rgb(141,0,0);
-  font-weight: 700;
-}
-.news-item p {
-  color: #333;
-  margin-bottom: 0;
-}
-</style>
 
 <!-- SCRIPT -->
 <script>
@@ -327,6 +324,7 @@ Dalam wawancara pastikan menjawab secara yakin, dan sungguh-sungguh dengan keper
   </script>
 </body>
 </html>
+
 
 
 
