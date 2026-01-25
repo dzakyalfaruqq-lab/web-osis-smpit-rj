@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mekanisme Debat Pilketos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1c1c1c, #2b5876);
+      color: white;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      padding: 60px;
+      animation: fade 0.8s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      background: #f9d423;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ffdd67;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <h1>Mekanisme & Etika Debat</h1>
+    <h2>Pemilihan Ketua & Wakil Ketua OSIS</h2>
+    <p>Debat bukan untuk menjatuhkan, tapi menyampaikan gagasan.</p>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <h2>Tujuan Debat Pilketos</h2>
+    <ul>
+      <li>Menyampaikan visi, misi, dan program kerja</li>
+      <li>Melatih cara berpikir kritis</li>
+      <li>Menunjukkan sikap kepemimpinan</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <h2>Yang Dinilai Dalam Debat</h2>
+    <ul>
+      <li>Cara menyampaikan pendapat</li>
+      <li>Isi jawaban & solusi</li>
+      <li>Sikap dan etika</li>
+      <li>Kerja sama Ketua & Wakil</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <h2>Alur Umum Debat</h2>
+    <ul>
+      <li>Pembukaan</li>
+      <li>Pemaparan visi & misi</li>
+      <li>Sesi tanya jawab</li>
+      <li>Pernyataan penutup</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <h2>Aturan Dasar Debat</h2>
+    <ul>
+      <li>Tidak menyerang pribadi</li>
+      <li>Tidak memotong pembicaraan</li>
+      <li>Menggunakan bahasa sopan</li>
+      <li>Mematuhi waktu yang ditentukan</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <h2>Etika Saat Menjawab</h2>
+    <ul>
+      <li>Dengarkan pertanyaan sampai selesai</li>
+      <li>Jawab dengan tenang dan jelas</li>
+      <li>Tidak emosi atau menyindir</li>
+      <li>Fokus pada solusi</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide">
+    <h2>Etika Saat Berbeda Pendapat</h2>
+    <ul>
+      <li>Menghargai pendapat lawan</li>
+      <li>Tidak merendahkan</li>
+      <li>Gunakan data atau alasan logis</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <div class="slide">
+    <h2>Kesalahan yang Harus Dihindari</h2>
+    <ul>
+      <li>Emosi berlebihan</li>
+      <li>Menyindir atau mengejek</li>
+      <li>Berjanji tanpa solusi</li>
+      <li>Terlalu defensif</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <div class="slide">
+    <h2>Simulasi Pertanyaan Debat</h2>
+    <p>
+      “Jika program kerja kalian tidak berjalan sesuai rencana,  
+      apa langkah yang akan kalian ambil?”
+    </p>
+  </div>
+
+  <!-- SLIDE 10 -->
+  <div class="slide">
+    <h2>Penutup</h2>
+    <p>
+      Debat adalah cerminan karakter pemimpin.  
+      <br><br>
+      <b>Tunjukkan gagasan, sikap, dan kesiapan.</b>
+    </p>
+  </div>
+
+  <button onclick="window.location.href='visi-misi.html'" class="next-btn">
+    ▶ Lanjut ke Visi, Misi & Proker
+  </button>
+</div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀</button>
+    <button onclick="nextSlide()">▶</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+
+</body>
+</html>

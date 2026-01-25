@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pembinaan Calon Ketua & Wakil OSIS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      padding: 60px;
+      animation: fade 0.8s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      background: #00c6ff;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #7ee8fa;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <h1>Mindset Kepemimpinan</h1>
+    <h2>Ketua & Wakil Ketua OSIS</h2>
+    <p>Pembinaan Calon Ketua dan Wakil Ketua OSIS</p>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <h2>Tujuan Pembinaan</h2>
+    <ul>
+      <li>Memahami peran OSIS</li>
+      <li>Mengetahui tugas Ketua & Wakil</li>
+      <li>Membangun mindset kepemimpinan</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <h2>Apa Itu OSIS?</h2>
+    <ul>
+      <li>Organisasi resmi siswa di sekolah</li>
+      <li>Wadah aspirasi dan kegiatan siswa</li>
+      <li>Penggerak lingkungan sekolah</li>
+    </ul>
+    <p><b>OSIS bukan formalitas, tapi pergerakan.</b></p>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <h2>Kenapa OSIS Itu Penting?</h2>
+    <ul>
+      <li>Menyalurkan aspirasi siswa</li>
+      <li>Melatih kepemimpinan</li>
+      <li>Menciptakan sekolah yang aktif</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <h2>Peran Ketua OSIS</h2>
+    <ul>
+      <li>Memimpin dan mengoordinasi pengurus</li>
+      <li>Mengambil keputusan bersama</li>
+      <li>Bertanggung jawab atas program</li>
+    </ul>
+    <p><b>Ketua ≠ Bos</b></p>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <h2>Peran Wakil Ketua OSIS</h2>
+    <ul>
+      <li>Mendampingi Ketua</li>
+      <li>Mengontrol jalannya program</li>
+      <li>Menjaga kekompakan tim</li>
+    </ul>
+    <p><b>Wakil ≠ Cadangan</b></p>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide">
+    <h2>Mindset Pemimpin</h2>
+    <ul>
+      <li>Siap tanggung jawab</li>
+      <li>Siap dikritik</li>
+      <li>Mau mendengar</li>
+      <li>Konsisten antara ucapan & tindakan</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <div class="slide">
+    <h2>Mindset yang Harus Dihindari</h2>
+    <ul>
+      <li>Cari jabatan</li>
+      <li>Pengen terkenal</li>
+      <li>Baperan</li>
+      <li>Lempar tanggung jawab</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <div class="slide">
+    <h2>Studi Kasus</h2>
+    <p>
+      Salah satu program OSIS tidak berjalan karena tim tidak solid.  
+      <br><br>
+      <b>Apa yang akan kalian lakukan sebagai Ketua atau Wakil?</b>
+    </p>
+  </div>
+
+  <!-- SLIDE 10 -->
+<div class="slide">
+  <h2>Mindset Pemimpin</h2>
+  <ul>
+    <li>Siap bertanggung jawab</li>
+    <li>Siap dikritik dan dievaluasi</li>
+    <li>Mau mendengar pendapat orang lain</li>
+    <li>Konsisten antara ucapan dan tindakan</li>
+  </ul>
+
+  <p style="margin-top: 30px; font-weight: bold;">
+    Kepemimpinan bukan soal menang,  
+    tapi soal kesiapan menjalankan amanah.
+  </p>
+<br>
+  <button class="next-btn" onclick="window.location.href='debat.html'">
+    ▶ Lanjut ke Mekanisme Debat
+  </button>
+</div>
+
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀</button>
+    <button onclick="nextSlide()">▶</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+
+</body>
+</html>

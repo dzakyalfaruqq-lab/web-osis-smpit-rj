@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mekanisme Debat Pilketos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1c1c1c, #2b5876);
+      color: white;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      padding: 60px;
+      animation: fade 0.8s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      background: #f9d423;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ffdd67;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <h1>Visi, Misi & Program Kerja</h1>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <h2>Apa itu Visi?</h2>
+    <ul>
+      <li>Gambaran besar OSIS ke depan</li>
+        <li>Tujuan jangka panjang</li>
+        <li>Inspiratif dan memotivasi</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <h2>Apa itu Misi?</h2>
+    <ul>
+      <li>Langkah konkret untuk mencapai visi</li>
+      <li>Fokus pada pelayanan siswa</li>
+      <li>Relevan dengan kebutuhan sekolah</li>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <h2>Apa itu Program Kerja?</h2>
+    <ul>
+        <li>Realistis</li>
+        <li>Sesuai kondisi sekolah</li>
+        <li>Bisa dilaksanakan</li>
+    </ul>
+
+  </div>
+
+  <button class="next-btn", onclick="window.location.href='publicspeaking.html'">
+    ▶ Lanjut ke Simulasi Public Speaking
+  </button>
+</div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀</button>
+    <button onclick="nextSlide()">▶</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+
+</body>
+</html>

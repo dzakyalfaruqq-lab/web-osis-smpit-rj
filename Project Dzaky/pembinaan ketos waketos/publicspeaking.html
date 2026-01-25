@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Materi 4 – Public Speaking & Kampanye</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      padding: 60px;
+      animation: fade 0.8s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+      background: #00c6ff;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #7ee8fa;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <h1>Public Speaking & Kampanye</h1>
+    <h2>Calon Ketua & Wakil Ketua OSIS</h2>
+    <p>Materi Pembinaan Pilketos</p>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide">
+    <h2>Kenapa Public Speaking Penting?</h2>
+    <ul>
+      <li>Pemimpin harus bisa menyampaikan ide</li>
+      <li>Meyakinkan tanpa memaksa</li>
+      <li>Membangun kepercayaan siswa</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <h2>Dasar Public Speaking</h2>
+    <ul>
+      <li>Kontak mata dengan audiens</li>
+      <li>Suara jelas & tidak terlalu cepat</li>
+      <li>Postur tubuh percaya diri</li>
+      <li>Bahasa yang sopan dan santun</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <h2>Cara Mengatasi Gugup</h2>
+    <ul>
+      <li>Tarik napas sebelum berbicara</li>
+      <li>Fokus ke isi, bukan ke penilaian orang</li>
+      <li>Latihan sebelumnya</li>
+    </ul>
+    <p><b>Gugup itu wajar, diam itu masalah.</b></p>
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <h2>Apa Itu Kampanye?</h2>
+    <ul>
+      <li>Proses memperkenalkan diri</li>
+      <li>Menyampaikan visi & misi</li>
+      <li>Mengajak siswa memilih dengan sadar</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 6 -->
+  <div class="slide">
+    <h2>Kampanye yang Baik</h2>
+    <ul>
+      <li>Jujur dan realistis</li>
+      <li>Tidak menjelekkan lawan</li>
+      <li>Bahasa sopan & positif</li>
+      <li>Menjaga sikap di mana pun</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 7 -->
+  <div class="slide">
+    <h2>Yang Harus Dihindari</h2>
+    <ul>
+      <li>Janji berlebihan</li>
+      <li>Mencari popularitas semata</li>
+      <li>Menyerang pasangan lain</li>
+      <li>Meremehkan aturan</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 8 -->
+  <div class="slide">
+    <h2>Etika Sebagai Calon Pemimpin</h2>
+    <ul>
+      <li>Menghormati panitia & lawan</li>
+      <li>Siap menang & siap kalah</li>
+      <li>Menjadi contoh bagi siswa lain</li>
+    </ul>
+  </div>
+
+  <!-- SLIDE 9 -->
+  <div class="slide">
+    <h2>Simulasi</h2>
+    <p>
+      Silakan sampaikan visi & misi kalian  
+      <br><br>
+      secara jelas, objektif dan sopan.
+    </p>
+  </div>
+
+  <!-- SLIDE 10 -->
+  <div class="slide">
+    <h2>Penegasan</h2>
+    <p>
+      Kampanye bukan ajang pamer,  
+      tapi ajang menunjukkan kesiapan memimpin.
+    </p>
+
+    <button class="next-btn" onclick="window.location.href='penutup.html'">
+      ▶ Lanjut ke Penutup
+    </button>
+  </div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">◀</button>
+    <button onclick="nextSlide()">▶</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+
+</body>
+</html>
